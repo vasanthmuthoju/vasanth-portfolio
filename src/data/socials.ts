@@ -1,7 +1,7 @@
 export const socials = {
     github: "https://github.com/vasanthmuthoju",
-    linkedin: "https://linkedin.com/in/vasanthmuthoju",
-    email: "vasanth.muthoju1@gmail.com",
-    phone: "+91-9398221602",
-    location: "Hyderabad, Telangana, India",
+    linkedin: import.meta.env.VITE_LINKEDIN,
+    email: import.meta.env.VITE_EMAIL,
+    phone: import.meta.env.VITE_PHONE,
+    location: import.meta.env.VITE_LOCATION,
 };
