@@ -25,12 +25,10 @@ export function Navbar() {
     const [active, setActive] = useState("top");
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    const [dark, setDark] = useState(
-        () =>
-            typeof window !== "undefined" &&
-            localStorage.getItem("portfolio-theme") === "dark",
-    );
-
+    const [dark, setDark] = useState(() => {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        return savedTheme !== "light";
+    });
     const { scrollYProgress } = useScroll();
 
     const progress = useSpring(scrollYProgress, {
@@ -139,16 +137,16 @@ export function Navbar() {
                                         isActive ? "location" : undefined
                                     }
                                     className={`relative px-3 py-2 text-[11px] font-semibold transition-colors duration-200 xl:px-4 xl:text-xs ${isActive
-                                            ? "text-neutral-900 dark:text-lime-400"
-                                            : "text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#F5F5F0]"
+                                        ? "text-neutral-900 dark:text-lime-400"
+                                        : "text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#F5F5F0]"
                                         }`}
                                 >
                                     {link.label}
 
                                     <span
                                         className={`absolute inset-x-3 -bottom-[1px] h-[2px] origin-left bg-lime-400 transition-transform duration-300 ${isActive
-                                                ? "scale-x-100"
-                                                : "scale-x-0"
+                                            ? "scale-x-100"
+                                            : "scale-x-0"
                                             }`}
                                     />
                                 </a>
@@ -265,8 +263,8 @@ export function Navbar() {
                                             : 0,
                                     }}
                                     className={`flex items-center justify-between border-b border-neutral-900/5 px-3 py-3.5 text-sm font-semibold last:border-b-0 dark:border-white/5 ${isActive
-                                            ? "text-lime-700 dark:text-lime-400"
-                                            : "text-neutral-700 hover:bg-neutral-900/5 dark:text-neutral-300 dark:hover:bg-white/5"
+                                        ? "text-lime-700 dark:text-lime-400"
+                                        : "text-neutral-700 hover:bg-neutral-900/5 dark:text-neutral-300 dark:hover:bg-white/5"
                                         }`}
                                 >
                                     {link.label}

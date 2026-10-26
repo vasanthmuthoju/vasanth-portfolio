@@ -159,7 +159,7 @@ export function Hero() {
                         >
                             <h1 className="flex flex-wrap items-baseline gap-x-3 font-['Space_Grotesk',sans-serif] text-[clamp(2.75rem,6.5vw,5.75rem)] font-bold leading-[0.98] tracking-[-0.075em]">
                                 <span>Vasanth</span>
-                                <span className="text-lime-700 dark:text-lime-400">
+                                <span className="text-lime-500 dark:text-lime-400">
                                     Muthoju
                                     <span className="text-lime-400">.</span>
                                 </span>
