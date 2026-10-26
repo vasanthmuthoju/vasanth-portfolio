@@ -215,15 +215,17 @@ export function Hero() {
                                 <ArrowDown size={16} aria-hidden="true" />
                             </a>
 
+
                             <a
-                                href="/Vasanthmuthoju_Frontend_Engineer.pdf"
+                                href="https://drive.google.com/file/d/1cl9xIgJECzN88La3kIQqIICCOnyl5Ik2/view?usp=sharing"
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className="inline-flex min-h-12 items-center justify-center gap-2.5 border border-neutral-900/20 px-5 py-3 text-xs font-extrabold transition hover:-translate-y-0.5 hover:border-lime-500 hover:bg-lime-400 hover:text-neutral-900 dark:border-white/20 dark:hover:border-lime-400"
                             >
                                 Resume
                                 <Download size={15} aria-hidden="true" />
                             </a>
+
                         </motion.div>
 
                         {/* Technologies */}
