@@ -1,0 +1,117 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Centralized theme colors */
+:root {
+  --color-brand: #a3e635;
+  --color-brand-hover: #84cc16;
+
+  --color-background: #f5f5f0;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #eeeee7;
+
+  --color-foreground: #171717;
+  --color-muted: #525252;
+  --color-subtle: #737373;
+
+  --color-border: #e5e5e5;
+  --color-button-text: #171717;
+}
+
+.dark {
+  --color-brand: #a3e635;
+  --color-brand-hover: #bef264;
+
+  --color-background: #171717;
+  --color-surface: #202020;
+  --color-surface-secondary: #262626;
+
+  --color-foreground: #f5f5f0;
+  --color-muted: #d4d4d4;
+  --color-subtle: #a3a3a3;
+
+  --color-border: #404040;
+  --color-button-text: #171717;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: Inter, system-ui, sans-serif;
+    transition: background-color 250ms ease, color 250ms ease;
+  }
+
+  ::selection {
+    background-color: var(--color-brand);
+    color: var(--color-button-text);
+  }
+}
+
+@layer utilities {
+  .bg-theme {
+    background-color: var(--color-background);
+  }
+
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+
+  .bg-surface-secondary {
+    background-color: var(--color-surface-secondary);
+  }
+
+  .text-theme {
+    color: var(--color-foreground);
+  }
+
+  .text-muted {
+    color: var(--color-muted);
+  }
+
+  .text-subtle {
+    color: var(--color-subtle);
+  }
+
+  .border-theme {
+    border-color: var(--color-border);
+  }
+
+  .bg-brand {
+    background-color: var(--color-brand);
+  }
+
+  .hover-brand:hover {
+    background-color: var(--color-brand-hover);
+  }
+
+  .text-button {
+    color: var(--color-button-text);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-surface-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-brand);
+}
