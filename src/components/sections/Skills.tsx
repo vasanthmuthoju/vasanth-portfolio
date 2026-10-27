@@ -8,7 +8,11 @@ import {
     Zap,
     BarChart3,
     Wrench,
+    Database,
+    ClipboardCheck,
+    GitBranch,
 } from "lucide-react";
+
 import { skillGroups } from "../../data/skills";
 import { SectionHeading } from "../ui/SectionHeading";
 
@@ -20,6 +24,9 @@ const icons = {
     zap: Zap,
     chart: BarChart3,
     wrench: Wrench,
+    database: Database,
+    "clipboard-check": ClipboardCheck,
+    "git-branch": GitBranch,
 } as const;
 
 export function Skills() {
@@ -37,11 +44,9 @@ export function Skills() {
                     subtitle="A practical stack for building, integrating and maintaining modern web applications."
                 />
 
-                {/* Skill cards */}
                 <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {skillGroups.map((group, index) => {
-                        const Icon =
-                            icons[group.icon as keyof typeof icons];
+                        const Icon = icons[group.icon];
 
                         return (
                             <motion.article
@@ -60,18 +65,18 @@ export function Skills() {
                                 }}
                                 transition={{
                                     duration: reduceMotion ? 0 : 0.45,
-                                    delay: reduceMotion ? 0 : index * 0.045,
+                                    delay: reduceMotion
+                                        ? 0
+                                        : index * 0.045,
                                     ease: [0.22, 1, 0.36, 1],
                                 }}
                                 className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-900/10 bg-white/70 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-lime-500/50 hover:bg-white dark:border-white/10 dark:bg-white/[0.025] dark:hover:border-lime-400/40 dark:hover:bg-white/[0.045] sm:p-6"
                             >
-                                {/* Top accent */}
                                 <div
                                     aria-hidden="true"
                                     className="absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 bg-lime-400 transition-transform duration-300 group-hover:scale-x-100"
                                 />
 
-                                {/* Icon and index */}
                                 <div className="flex items-start justify-between">
                                     <span className="grid h-11 w-11 place-items-center border border-lime-500/20 bg-lime-400/15 text-lime-700 transition-colors duration-300 group-hover:border-lime-400 group-hover:bg-lime-400 group-hover:text-neutral-900 dark:border-lime-400/20 dark:text-lime-400 dark:group-hover:text-neutral-900">
                                         <Icon
@@ -85,12 +90,10 @@ export function Skills() {
                                     </span>
                                 </div>
 
-                                {/* Group title */}
                                 <h3 className="mt-5 font-['Space_Grotesk',sans-serif] text-lg font-bold tracking-tight text-neutral-900 dark:text-[#F5F5F0]">
                                     {group.label}
                                 </h3>
 
-                                {/* Technologies */}
                                 <div className="mt-4 flex flex-wrap gap-2">
                                     {group.items.map((item) => (
                                         <span
@@ -102,7 +105,6 @@ export function Skills() {
                                     ))}
                                 </div>
 
-                                {/* Bottom accent */}
                                 <div
                                     aria-hidden="true"
                                     className="mt-auto h-[2px] w-7 bg-lime-400/60 pt-0 transition-all duration-300 group-hover:w-12 group-hover:bg-lime-400"
@@ -112,7 +114,6 @@ export function Skills() {
                     })}
                 </div>
 
-                {/* Supporting note */}
                 <p className="mt-7 text-center text-xs leading-6 text-neutral-500 dark:text-neutral-400">
                     Tools and techniques shown reflect my working toolkit; I
                     keep expanding it through hands-on projects.

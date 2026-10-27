@@ -44,7 +44,7 @@ const details = [
     {
         icon: BriefcaseBusiness,
         label: "Current role",
-        value: "Frontend Engineer · Sysrek",
+        value: "Frontend Engineer · Sysrek InfoSolutions",
     },
     {
         icon: GraduationCap,
@@ -70,7 +70,7 @@ export function About() {
     return (
         <section
             id="about"
-            className="scroll-mt-28 bg-[#F5F5F0] px-5 py-20 text-neutral-900 transition-colors duration-300 dark:bg-[#171717] dark:text-[#F5F5F0] sm:px-8 sm:py-28"
+            className="scroll-mt-28 bg-[#F5F5F0] px-5 py-20 text-neutral-900 transition-colors duration-300 dark:bg-[#171717] dark:text-[#F5F5F0] sm:px-8 sm:py-20"
         >
             <div className="mx-auto max-w-6xl">
                 <SectionHeading

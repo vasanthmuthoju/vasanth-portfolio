@@ -41,10 +41,10 @@ const technologies = [
 ];
 
 const specialties = [
-    "React Developer",
-    "JavaScript",
-    "TypeScript",
-    "Web Development",
+    "Responsive UI Development",
+    "React Applications",
+    "API Integration",
+    "JavaScript & TypeScript",
 ];
 
 export function Hero() {
@@ -73,14 +73,13 @@ export function Hero() {
     return (
         <section
             id="top"
-            className="relative isolate flex min-h-[90svh] items-center overflow-hidden bg-[#F5F5F0] pt-32 pb-12 text-neutral-900 transition-colors duration-300 dark:bg-[#171717] dark:text-[#F5F5F0] sm:pt-36 sm:pb-16 lg:min-h-[100svh] lg:pt-32 lg:pb-16"
+            className="relative isolate flex min-h-[90svh] items-center overflow-hidden bg-[#F5F5F0] py-24 pt-32 text-neutral-900 transition-colors duration-300 dark:bg-[#171717] dark:text-[#F5F5F0] sm:py-28 sm:pt-36 lg:min-h-[100svh] lg:py-24"
         >
-            {/* Slowly rotating decorative outline rings */}
+            {/* Animated background rings */}
             <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
             >
-                {/* Outer ring */}
                 <motion.div
                     animate={reduceMotion ? undefined : { rotate: 360 }}
                     transition={
@@ -95,7 +94,6 @@ export function Hero() {
                     className="absolute -right-[24rem] -top-[22rem] h-[52rem] w-[52rem] rounded-full border border-neutral-900/[0.08] dark:border-white/[0.09] sm:-right-[18rem] sm:-top-[25rem] lg:-right-[15rem] lg:-top-[30rem] lg:h-[72rem] lg:w-[72rem]"
                 />
 
-                {/* Middle ring: opposite rotation */}
                 <motion.div
                     animate={reduceMotion ? undefined : { rotate: -360 }}
                     transition={
@@ -110,7 +108,6 @@ export function Hero() {
                     className="absolute -right-[17rem] -top-[15rem] h-[38rem] w-[38rem] rounded-full border border-lime-700/15 dark:border-lime-400/[0.13] sm:-right-[12rem] sm:-top-[18rem] lg:-right-[8rem] lg:-top-[21rem] lg:h-[52rem] lg:w-[52rem]"
                 />
 
-                {/* Inner ring */}
                 <motion.div
                     animate={reduceMotion ? undefined : { rotate: 360 }}
                     transition={
@@ -127,7 +124,7 @@ export function Hero() {
             </div>
 
             <div className="mx-auto w-full max-w-[1392px] px-5 sm:px-8 lg:px-12 2xl:px-[76px]">
-                <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-10 xl:grid-cols-[minmax(0,1fr)_260px] xl:gap-[72px]">
+                <div className="grid min-w-0 grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,260px)] lg:gap-10 xl:grid-cols-[minmax(0,1fr)_minmax(0,280px)] xl:gap-[72px]">
                     {/* Main introduction */}
                     <div className="min-w-0">
                         {/* Role label */}
@@ -136,17 +133,20 @@ export function Hero() {
                             animate="visible"
                             variants={reveal}
                             transition={transition(0.05)}
-                            className="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase leading-7 tracking-[0.12em] text-neutral-500 dark:text-neutral-400 sm:text-[11px]"
+                            className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] uppercase leading-7 tracking-[0.12em] text-neutral-500 dark:text-neutral-400 sm:text-[11px]"
                         >
                             <span
                                 aria-hidden="true"
                                 className="h-2 w-2 shrink-0 bg-lime-400"
                             />
-                            Frontend Engineer
+
+                            <span>Frontend Engineer</span>
+
                             <span className="text-lime-700 dark:text-lime-400">
                                 /
                             </span>
-                            React Developer
+
+                            <span>React Developer</span>
                         </motion.div>
 
                         {/* Name and headline */}
@@ -155,32 +155,36 @@ export function Hero() {
                             animate="visible"
                             variants={reveal}
                             transition={transition(0.12)}
-                            className="mt-7"
+                            className="mt-6 min-w-0"
                         >
-                            <h1 className="flex flex-wrap items-baseline gap-x-3 font-['Space_Grotesk',sans-serif] text-[clamp(2.75rem,6.5vw,5.75rem)] font-bold leading-[0.98] tracking-[-0.075em]">
-                                <span>Vasanth</span>
-                                <span className="text-lime-500 dark:text-lime-400">
-                                    Muthoju
-                                    <span className="text-lime-400">.</span>
+                            <h1 className="flex min-w-0 flex-wrap items-baseline gap-x-3 font-['Space_Grotesk',sans-serif] text-[clamp(2.75rem,6.5vw,5.75rem)] font-bold leading-[0.98] tracking-[-0.075em]">
+                                <span className="shrink-0">Vasanth</span>
+
+                                <span className="min-w-0 max-w-full break-words text-lime-500 dark:text-lime-400">
+                                    Muthoju<span>.</span>
                                 </span>
                             </h1>
 
                             <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[10px] uppercase leading-7 tracking-[0.08em] text-neutral-500 dark:text-neutral-400 sm:text-xs">
                                 <span>JavaScript</span>
+
                                 <span className="text-lime-700 dark:text-lime-400">
                                     /
                                 </span>
+
                                 <span>TypeScript</span>
+
                                 <span className="text-lime-700 dark:text-lime-400">
                                     /
                                 </span>
+
                                 <span>Web Development</span>
                             </p>
 
-                            <h2 className="mt-9 font-['Space_Grotesk',sans-serif] text-[clamp(3.35rem,9.2vw,8rem)] font-bold leading-[0.87] tracking-[-0.095em]">
+                            <h2 className="mt-9 font-['Space_Grotesk',sans-serif] text-[clamp(3.1rem,8.8vw,8rem)] font-bold leading-[0.9] tracking-[-0.085em]">
                                 <span className="block">Building</span>
                                 <span className="block">digital</span>
-                                <span className="mt-2 block w-fit max-w-full bg-lime-400 px-[0.06em] pb-[0.04em] text-neutral-900">
+                                <span className="mt-2 block w-fit max-w-full break-words bg-lime-400 px-[0.06em] pb-[0.04em] text-neutral-900">
                                     experiences.
                                 </span>
                             </h2>
@@ -215,7 +219,6 @@ export function Hero() {
                                 <ArrowDown size={16} aria-hidden="true" />
                             </a>
 
-
                             <a
                                 href="https://drive.google.com/file/d/1cl9xIgJECzN88La3kIQqIICCOnyl5Ik2/view?usp=sharing"
                                 target="_blank"
@@ -225,10 +228,9 @@ export function Hero() {
                                 Resume
                                 <Download size={15} aria-hidden="true" />
                             </a>
-
                         </motion.div>
 
-                        {/* Technologies */}
+                        {/* Core technologies */}
                         <motion.div
                             initial="hidden"
                             animate="visible"
@@ -292,18 +294,19 @@ export function Hero() {
                         className="hidden min-w-0 self-center pb-2 lg:block"
                     >
                         {/* Technology heading */}
-                        <h2 className="whitespace-nowrap font-['Space_Grotesk',sans-serif] text-4xl font-bold leading-none tracking-[-0.075em] xl:text-5xl">
-                            React
-                            <span className="text-lime-500">/</span>
-                            JS
-                            <span className="text-lime-500">/</span>
-                            TS
+                        <h2 className="flex flex-wrap items-baseline whitespace-nowrap font-['Space_Grotesk',sans-serif] text-[clamp(1.8rem,3vw,3rem)] font-bold leading-none tracking-[-0.075em]">
+                            <span>React</span>
+                            <span className="mx-1 text-lime-500">/</span>
+                            <span>JS</span>
+                            <span className="mx-1 text-lime-500">/</span>
+                            <span>TS</span>
                         </h2>
 
                         {/* Description */}
-                        <p className="mt-5 max-w-[230px] text-sm leading-7 text-neutral-500 dark:text-neutral-400">
+                        <p className="mt-5 max-w-[250px] text-sm leading-7 text-neutral-500 dark:text-neutral-400">
                             Modern frontend development, from reusable React
-                            components to production-ready web applications.
+                            components to responsive, production-ready web
+                            applications.
                         </p>
 
                         {/* Specialties */}
@@ -324,7 +327,7 @@ export function Hero() {
                                             ? 0
                                             : index * 0.06,
                                     }}
-                                    className="flex min-h-9 items-center border-l-2 border-lime-400 pl-3 font-mono text-xs text-neutral-600 dark:text-neutral-300"
+                                    className="flex min-h-11 items-center border-l-2 border-lime-400 pl-3 font-mono text-xs leading-5 text-neutral-600 dark:text-neutral-300"
                                 >
                                     {specialty}
                                 </motion.div>
