@@ -73,7 +73,7 @@ export function Hero() {
     return (
         <section
             id="top"
-            className="relative isolate flex min-h-[90svh] items-center overflow-hidden bg-[#F5F5F0] py-32 text-neutral-900 transition-colors duration-300 dark:bg-[#171717] dark:text-[#F5F5F0] sm:py-36 lg:min-h-[100svh] lg:py-32"
+            className="relative isolate flex min-h-[90svh] items-center overflow-hidden bg-[#F5F5F0] pt-32 pb-12 text-neutral-900 transition-colors duration-300 dark:bg-[#171717] dark:text-[#F5F5F0] sm:pt-36 sm:pb-16 lg:min-h-[100svh] lg:pt-32 lg:pb-16"
         >
             {/* Slowly rotating decorative outline rings */}
             <div
