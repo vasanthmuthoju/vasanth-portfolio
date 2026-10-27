@@ -100,30 +100,40 @@ export function About() {
                             </span>
                         </div>
 
+                        {/* Professional introduction */}
                         <p className="text-lg leading-8 text-neutral-700 dark:text-neutral-200">
                             I'm a{" "}
                             <strong className="font-semibold text-neutral-950 decoration-lime-400 decoration-2 underline-offset-4 dark:text-white">
                                 Frontend Engineer at Sysrek InfoSolutions
                             </strong>
-                            , focused on building responsive web experiences
-                            with React, JavaScript, TypeScript, and modern UI
-                            tooling.
+                            , with hands-on experience building and evolving
+                            web applications across multiple business domains,
+                            including recruitment, project management, IT asset
+                            tracking, and document management.
                         </p>
 
+                        {/* Technical experience */}
                         <p className="mt-5 text-sm leading-7 text-neutral-600 dark:text-neutral-400 sm:text-base">
-                            My work spans recruitment software,
-                            project-management SaaS, IT asset management, and
-                            document workflows. I've also worked on migrating
-                            an Inertia.js frontend to a standalone React
-                            application and integrating Django REST Framework
-                            APIs in collaboration with a backend developer.
+                            My work involves developing scalable frontend
+                            architectures with React and TypeScript, building
+                            reusable UI components, integrating REST APIs, and
+                            modernizing existing applications into standalone
+                            React solutions. I collaborate closely with backend
+                            developers to connect frontend interfaces with
+                            application data, authentication, and business
+                            workflows.
                         </p>
 
+                        {/* Engineering philosophy */}
                         <p className="mt-5 text-sm leading-7 text-neutral-600 dark:text-neutral-400 sm:text-base">
-                            I care about more than how a page looks: I want
-                            interfaces to communicate clearly, behave
-                            consistently, handle real data, and remain
-                            straightforward to extend.
+                            I approach frontend engineering with a focus on
+                            maintainability, performance, and usability. I care
+                            about more than how a page looks: I want interfaces
+                            to communicate clearly, behave consistently, handle
+                            real data, and remain straightforward to extend. I
+                            strive to build dependable user experiences backed
+                            by clean architecture and thoughtful engineering
+                            decisions.
                         </p>
 
                         {/* Skills and approach */}
